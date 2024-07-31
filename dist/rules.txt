@@ -1,0 +1,6 @@
+Rules:  
+You can make changes in your own base only.
+click on first cell and then click on second cell to interchange them.
+After configuring your default base, Click on Play button to start game.
+Bonus chance, if found correct Base.
+To win: Find out all hidden blue bases.
