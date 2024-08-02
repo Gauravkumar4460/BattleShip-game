@@ -1,6 +1,6 @@
 @media screen and (min-width: 811px){
     body>h1{
-        margin-left: 550px;
+        margin-left: 150px;
     }
     #header{
         display: flex;
@@ -64,7 +64,7 @@
     }
     #play-button{
         background-color: lightgreen;
-        margin-left: 550px;
+        margin-left: 150px;
         cursor: pointer;
         border-radius: 5px;
         
