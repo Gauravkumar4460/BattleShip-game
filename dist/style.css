@@ -39,10 +39,25 @@ button{
 }
 .inactive{
     pointer-events: none;
-    opacity: 0.2;
+    opacity: 0.4;
 }
 .highlightBorder{
     border: 1.5px solid blue;
+}
+.highlightBorderBlue{
+    border: 2px solid blue;
+}
+.highlightBorderRed{
+    border: 2px solid red;
+}
+.highlightBorderGreen{
+    border: 2px solid green;
+}
+.highlightBorderSkyblue{
+    border: 2px solid skyblue;
+}
+.highlightBorderViolet{
+    border: 2px solid violet;
 }
 #play-button{
     background-color: lightgreen;

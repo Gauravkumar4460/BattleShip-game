@@ -27,13 +27,246 @@ function controlGame(){
         }else{
             const cell = document.querySelector(`.cell[data-x="${row}"][data-y="${col}"]`);
             handleClick(attacker,defender,row,col,cell);
-            row = Math.floor(Math.random() * (10-0)) + 0;
-            col = Math.floor(Math.random() * (10-0)) + 0;
+            
+            //row = Math.floor(Math.random() * (10-0)) + 0;
+            //col = Math.floor(Math.random() * (10-0)) + 0;
+            if(row===0&&col===0){
+                if(defender.playingBoard.board[row+1][col].hasHit === false){
+                    row = row+1;
+                    col = col;
+                }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                    row = row;
+                    col = col+1;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
+            }else if(row===0 && col===9){
+                if(defender.playingBoard.board[row+1][col].hasHit === false){
+                    row = row+1;
+                    col=col;
+                }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                    row = row;
+                    col = col-1;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
+            }else if(row === 9 && col === 0){
+                if(defender.playingBoard.board[row-1][col].hasHit === false){
+                    row = row-1;
+                    col = col;
+                }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                    row = row;
+                    col = col+1;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
+            }else if(row===9 && col===9){
+                if(defender.playingBoard.board[row-1][col].hasHit === false){
+                    row = row-1;
+                    col = col;
+                }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                    row = row;
+                    col = col-1;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
+            }else if(row === 0){
+                    if(defender.playingBoard.board[row][col-1].hasHit === false){
+                        row = row;
+                        col = col-1;
+                    }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                        row = row;
+                        col = col+1;
+                    }else if(defender.playingBoard.board[row+1][col].hasHit === false){
+                        row = row+1;
+                        col = col;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+            }else if(col === 9){
+                if(defender.playingBoard.board[row+1][col].hasHit === false){
+                    row = row+1;
+                    col = col;
+                }else if(defender.playingBoard.board[row-1][col].hasHit === false){
+                    row = row-1;
+                    col = col;
+                }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                    row = row;
+                    col = col-1;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
+            }else if(row === 9){
+                if(defender.playingBoard.board[row][col-1].hasHit === false){
+                    row = row;
+                    col = col-1;
+                }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                    row = row;
+                    col = col+1;
+                }else if(defender.playingBoard.board[row-1][col].hasHit === false){
+                    row = row-1;
+                    col = col;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
+            }else if(col === 0){
+                if(defender.playingBoard.board[row-1][col].hasHit === false){
+                    row = row-1;
+                    col = col;
+                }else if(defender.playingBoard.board[row+1][col].hasHit === false){
+                    row = row+1;
+                    col = col;
+                }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                    row = row;
+                    col = col+1;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
+            }else if(defender.playingBoard.board[row-1][col].hasHit === false){
+                    row = row -1;
+                    col = col;
+            }else if(defender.playingBoard.board[row+1][col].hasHit === false){
+                row = row +1;
+                col = col;
+            }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                row  = row;
+                col = col-1;
+            }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                row = row;
+                col = col+1;
+            }else{
+                row = Math.floor(Math.random() * (10-0)) + 0;
+                col = Math.floor(Math.random() * (10-0)) + 0;
+            }
             while(computerTargetBoard[row][col].hasHit === false && computerTargetBoard[row][col].filledShip !== null){
                 const cell = document.querySelector(`.cell[data-x="${row}"][data-y="${col}"]`);
                 handleClick(attacker,defender,row,col,cell);
-                row = Math.floor(Math.random() * (10-0)) + 0;
-                col = Math.floor(Math.random() * (10-0)) + 0;
+                //row = Math.floor(Math.random() * (10-0)) + 0;
+                //col = Math.floor(Math.random() * (10-0)) + 0;
+                if(row===0&&col===0){
+                    if(defender.playingBoard.board[row+1][col].hasHit === false){
+                        row = row+1;
+                        col = col;
+                    }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                        row = row;
+                        col = col+1;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+                }else if(row===0 && col===9){
+                    if(defender.playingBoard.board[row+1][col].hasHit === false){
+                        row = row+1;
+                        col=col;
+                    }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                        row = row;
+                        col = col-1;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+                }else if(row === 9 && col === 0){
+                    if(defender.playingBoard.board[row-1][col].hasHit === false){
+                        row = row-1;
+                        col = col;
+                    }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                        row = row;
+                        col = col+1;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+                }else if(row===9 && col===9){
+                    if(defender.playingBoard.board[row-1][col].hasHit === false){
+                        row = row-1;
+                        col = col;
+                    }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                        row = row;
+                        col = col-1;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+                }else if(row === 0){
+                        if(defender.playingBoard.board[row][col-1].hasHit === false){
+                            row = row;
+                            col = col-1;
+                        }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                            row = row;
+                            col = col+1;
+                        }else if(defender.playingBoard.board[row+1][col].hasHit === false){
+                            row = row+1;
+                            col = col;
+                        }else{
+                            row = Math.floor(Math.random() * (10-0)) + 0;
+                            col = Math.floor(Math.random() * (10-0)) + 0;
+                        }
+                }else if(col === 9){
+                    if(defender.playingBoard.board[row+1][col].hasHit === false){
+                        row = row+1;
+                        col = col;
+                    }else if(defender.playingBoard.board[row-1][col].hasHit === false){
+                        row = row-1;
+                        col = col;
+                    }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                        row = row;
+                        col = col-1;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+                }else if(row === 9){
+                    if(defender.playingBoard.board[row][col-1].hasHit === false){
+                        row = row;
+                        col = col-1;
+                    }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                        row = row;
+                        col = col+1;
+                    }else if(defender.playingBoard.board[row-1][col].hasHit === false){
+                        row = row-1;
+                        col = col;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+                }else if(col === 0){
+                    if(defender.playingBoard.board[row-1][col].hasHit === false){
+                        row = row-1;
+                        col = col;
+                    }else if(defender.playingBoard.board[row+1][col].hasHit === false){
+                        row = row+1;
+                        col = col;
+                    }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                        row = row;
+                        col = col+1;
+                    }else{
+                        row = Math.floor(Math.random() * (10-0)) + 0;
+                        col = Math.floor(Math.random() * (10-0)) + 0;
+                    }
+                }else if(defender.playingBoard.board[row-1][col].hasHit === false){
+                        row = row -1;
+                        col = col;
+                }else if(defender.playingBoard.board[row+1][col].hasHit === false){
+                    row = row +1;
+                    col = col;
+                }else if(defender.playingBoard.board[row][col-1].hasHit === false){
+                    row  = row;
+                    col = col-1;
+                }else if(defender.playingBoard.board[row][col+1].hasHit === false){
+                    row = row;
+                    col = col+1;
+                }else{
+                    row = Math.floor(Math.random() * (10-0)) + 0;
+                    col = Math.floor(Math.random() * (10-0)) + 0;
+                }
             }
             if(computerTargetBoard[row][col].filledShip !== null){
                 makeComputerMove(attacker,defender);
@@ -77,9 +310,15 @@ function controlGame(){
                                                 
                                                 }
                                                 if(defender.playingBoard.totalShips === 0){
+                                                    if(`${currentPlayer.name}` === 'Your'){
+                                                        setTimeout(() => {
+                                                            alert(` Congratulations!! You won the game.`);},
+                                                            100);
+                                                    }else{
                                                     setTimeout(() => {
                                                         alert(` Congratulations!! ${currentPlayer.name}, You won the game.`);},
                                                         100);
+                                                    }
                                                     const player1Board = player1.playingBoard.board;
                                                     const player2Board = player2.playingBoard.board;
                                                     const player1Cells = document.querySelectorAll('.cell');
@@ -170,11 +409,12 @@ function controlGame(){
             secondCell.dataset.y = tempData.y;
         }
         let firstCell = null, secondCell = null;
-        const handleDoubleClick = (event) => {
+        const handleClickAndSwap = (event) => {
             const cell = event.target;
 
             if(firstCell === null){
                 firstCell = cell;
+                console.log(`Selected cell at: ${cell.dataset.x},${cell.dataset.y}`);
                 return;
             }
             else secondCell = cell;
@@ -186,18 +426,32 @@ function controlGame(){
         };
        
         player1Board.querySelectorAll('.cell').forEach(cell => {
-            cell.addEventListener("click", handleDoubleClick);
+            cell.addEventListener("click", handleClickAndSwap);
         });
     };
     
-    const highlightBorder = (player1) => {
+    const highlightBorder = (player1,ship1,ship2,ship5,ship7,ship8) => {
         const player1Board = player1.playingBoard.board;
         const player1Cells = document.querySelectorAll('.cell');
         player1Cells.forEach(cell => {
             const x = parseInt(cell.dataset.x,10);
             const y = parseInt(cell.dataset.y,10);
             if(player1Board[x][y].filledShip !== null){
-                cell.classList.add('highlightBorder');
+                //cell.classList.add('highlightBorder');
+                
+                if(player1Board[x][y].filledShip === ship1){
+                    cell.classList.add('highlightBorderRed');
+                }else if(player1Board[x][y].filledShip === ship2){
+                    cell.classList.add('highlightBorderViolet');
+                }else if(player1Board[x][y].filledShip === ship5){
+                    cell.classList.add('highlightBorderSkyblue');
+                }else if(player1Board[x][y].filledShip === ship7){
+                    cell.classList.add('highlightBorderGreen');
+                }else if(player1Board[x][y].filledShip === ship8){
+                    cell.classList.add('highlightBorderBlue');
+                }
+
+
             }
         });
     };
@@ -216,7 +470,16 @@ function controlGame(){
         const player1Cells = player1Board.querySelectorAll('.cell');
         const player2Cells = player2Board.querySelectorAll('.cell2');
         player1Cells.forEach(cell => {
-            cell.classList.remove('highlightBorder');
+            cell.classList.remove('highlightBorderRed');
+            cell.classList.remove('highlightBorderGreen');
+            cell.classList.remove('highlightBorderViolet');
+            cell.classList.remove('highlightBorderSkyblue');
+            cell.classList.remove('highlightBorderBlue');
+            const x = parseInt(cell.dataset.x,10);
+            const y = parseInt(cell.dataset.y,10);
+            if(player1.playingBoard.board[x][y].filledShip !== null){
+                cell.classList.add('highlightBorder');
+            }
         });
         player2Cells.forEach(cell => {
             cell.classList.remove('highlightBorder');
@@ -237,22 +500,29 @@ function controlGame(){
     
 
     const ship1 = new Ship(3);
-    const ship2 = new Ship(4);
-    const ship5 = new Ship(2)
-    player1.playingBoard.placeShip(ship1,{x:1,y:1},'horizontal');
+    const ship2 = new Ship(2);
+    const ship5 = new Ship(2);
+    const ship7 = new Ship(2);
+    const ship8 = new Ship(1);
+    player1.playingBoard.placeShip(ship1,{x:5,y:1},'horizontal');
     player1.playingBoard.placeShip(ship2,{x:5,y:5},'horizontal');
     player1.playingBoard.placeShip(ship5,{x:0,y:8},'vertical');
+    player1.playingBoard.placeShip(ship7,{x:0,y:0},'horizontal');
+    player1.playingBoard.placeShip(ship8,{x:9,y:6},'vertical');
 
-
-    const ship3 = new Ship(4);
+    const ship3 = new Ship(2);
     const ship4 = new Ship(3);
     const ship6 = new Ship(2);
-    player2.playingBoard.placeShip(ship3,{x:2,y:2},'horizontal');
+    const ship9 = new Ship(2);
+    const ship10 = new Ship(1);
+    player2.playingBoard.placeShip(ship3,{x:2,y:1},'horizontal');
     player2.playingBoard.placeShip(ship4,{x:3,y:7},'horizontal');
     player2.playingBoard.placeShip(ship6,{x:8,y:8},'vertical');
+    player2.playingBoard.placeShip(ship9,{x:0,y:6},'vertical');
+    player2.playingBoard.placeShip(ship10,{x:8,y:0},'vertical');
 
-
-    highlightBorder(player1);
+    highlightBorder(player1,ship1,ship2,ship5,ship7,ship8);
+    //highlightBorder2(player2);
     
 
 
