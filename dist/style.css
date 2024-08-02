@@ -1,71 +1,147 @@
-body>h1{
-    margin-left: 550px;
-}
-#header{
-    display: flex;
-    gap: 50px;
-    justify-content: center;
-    align-items: center;
-}
-button{
-    width: 80px;
-    height: 40px;
-}
-#gameBoards{
-    display: flex;
-    gap: 180px;
-    justify-content: center;
-}
-.cell, .cell2{
-    background-color: lightgrey;
-    width: 40px;
-    height: 40px;
-    border: 1px solid grey;
-    border-radius: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-sizing: border-box;
-}
-#player1Board,#player2Board{
-    display: grid;
-}
-.target-miss{
-    background-color: lightcoral;
-}
-.target-hit{
-    background-color: skyblue;
-}
-.inactive{
-    pointer-events: none;
-    opacity: 0.4;
-}
-.highlightBorder{
-    border: 1.5px solid blue;
-}
-.highlightBorderBlue{
-    border: 2px solid blue;
-}
-.highlightBorderRed{
-    border: 2px solid red;
-}
-.highlightBorderGreen{
-    border: 2px solid green;
-}
-.highlightBorderSkyblue{
-    border: 2px solid skyblue;
-}
-.highlightBorderViolet{
-    border: 2px solid violet;
-}
-#play-button{
-    background-color: lightgreen;
-    margin-left: 550px;
-    cursor: pointer;
-    border-radius: 5px;
+@media screen and (min-width: 911px){
+    body>h1{
+        margin-left: 550px;
+    }
+    #header{
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        width: 80px;
+        height: 40px;
+    }
+    #gameBoards{
+        display: flex;
+        gap: 180px;
+        justify-content: center;
+    }
+    .cell, .cell2{
+        background-color: lightgrey;
+        width: 40px;
+        height: 40px;
+        border: 1px solid grey;
+        border-radius: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    #player1Board,#player2Board{
+        display: grid;
+    }
+    .target-miss{
+        background-color: lightcoral;
+    }
+    .target-hit{
+        background-color: skyblue;
+    }
+    .inactive{
+        pointer-events: none;
+        opacity: 0.4;
+    }
+    .highlightBorder{
+        border: 1.5px solid blue;
+    }
+    .highlightBorderBlue{
+        border: 2px solid blue;
+    }
+    .highlightBorderRed{
+        border: 2px solid red;
+    }
+    .highlightBorderGreen{
+        border: 2px solid green;
+    }
+    .highlightBorderSkyblue{
+        border: 2px solid skyblue;
+    }
+    .highlightBorderViolet{
+        border: 2px solid violet;
+    }
+    #play-button{
+        background-color: lightgreen;
+        margin-left: 550px;
+        cursor: pointer;
+        border-radius: 5px;
+        
+    }
+    #play-button:hover{
+        scale: 1.03;
+    }
+    }
+@media screen and (max-width: 910px ){
+    #gameBoards{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+    body>h1{
+        margin-left: 550px;
+    }
+    #header{
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    button{
+        width: 80px;
+        height: 40px;
+    }
+    .cell, .cell2{
+        background-color: lightgrey;
+        width: 40px;
+        height: 40px;
+        border: 1px solid grey;
+        border-radius: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+    #player1Board,#player2Board{
+        display: grid;
+    }
+    .target-miss{
+        background-color: lightcoral;
+    }
+    .target-hit{
+        background-color: skyblue;
+    }
+    .inactive{
+        pointer-events: none;
+        opacity: 0.4;
+    }
+    .highlightBorder{
+        border: 1.5px solid blue;
+    }
+    .highlightBorderBlue{
+        border: 2px solid blue;
+    }
+    .highlightBorderRed{
+        border: 2px solid red;
+    }
+    .highlightBorderGreen{
+        border: 2px solid green;
+    }
+    .highlightBorderSkyblue{
+        border: 2px solid skyblue;
+    }
+    .highlightBorderViolet{
+        border: 2px solid violet;
+    }
+    #play-button{
+        background-color: lightgreen;
+        margin-left: 550px;
+        cursor: pointer;
+        border-radius: 5px;
+        
+    }
+    #play-button:hover{
+        scale: 1.03;
+    }
     
-}
-#play-button:hover{
-    scale: 1.03;
 }
