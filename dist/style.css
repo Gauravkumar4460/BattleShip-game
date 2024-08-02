@@ -1,4 +1,4 @@
-@media screen and (min-width: 911px){
+@media screen and (min-width: 811px){
     body>h1{
         margin-left: 550px;
     }
@@ -73,7 +73,7 @@
         scale: 1.03;
     }
     }
-@media screen and (max-width: 910px ){
+@media screen and (max-width: 812px ){
     #gameBoards{
         display: flex;
         flex-direction: column;
