@@ -1,6 +1,6 @@
-@media screen and (min-width: 811px){
+@media screen and (min-width: 812px){
     body>h1{
-        margin-left: 150px;
+        margin-left: 550px;
     }
     #header{
         display: flex;
@@ -64,7 +64,7 @@
     }
     #play-button{
         background-color: lightgreen;
-        margin-left: 150px;
+        margin-left: 550px;
         cursor: pointer;
         border-radius: 5px;
         
@@ -73,14 +73,14 @@
         scale: 1.03;
     }
     }
-@media screen and (max-width: 812px ){
+@media screen and (max-width: 811px ){
     #gameBoards{
         display: flex;
         flex-direction: column;
         gap: 50px;
     }
     body>h1{
-        margin-left: 550px;
+        margin-left: 150px;
     }
     #header{
         display: flex;
@@ -137,7 +137,7 @@
     }
     #play-button{
         background-color: lightgreen;
-        margin-left: 550px;
+        margin-left: 150px;
         cursor: pointer;
         border-radius: 5px;
         
